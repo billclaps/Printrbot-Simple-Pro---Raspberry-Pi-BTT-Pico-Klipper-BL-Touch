@@ -35,6 +35,20 @@ We are currently in the process of migrating from OctoPrint (OctoPi) to a more n
 - Mainsail or Fluidd (web UI)
 - KlipperScreen (touchscreen interface, planned)
 
+## Quick Start
+
+Follow these steps to get the printer up and running with this configuration:
+
+1. Flash Klipper firmware to the BTT SKR Pico
+2. Install Klipper on your Raspberry Pi (OctoPi or MainsailOS)
+3. Copy `printer.cfg` to your Klipper config directory:
+4. Update the MCU serial in `printer.cfg`: Then replace the `serial:` line with your device ID
+5. Restart Klipper
+6. Home the printer and verify motion
+7. Run a test print (e.g., Benchy)
+
+> Note: This configuration assumes a stock Printrbot Simple Pro mechanical setup with upgraded electronics.
+
 ---
 
 ## Current Project Status
