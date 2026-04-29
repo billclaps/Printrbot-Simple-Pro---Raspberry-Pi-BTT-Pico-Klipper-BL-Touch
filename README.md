@@ -1,7 +1,7 @@
 # Printrbot Simple Pro — Raspberry Pi + BTT Pico + Klipper + BLTouch Conversion
 
 ## Overview
-This project documents the process of modernizing a Printrbot Simple Pro by replacing the original control electronics with a Raspberry Pi running Klipper and a BTT SKR Pico control board.
+This project documents the modernization of a Printrbot Simple Pro by replacing the original control electronics with a Raspberry Pi running Klipper and a BigTreeTech SKR Pico control board.
 
 The goal is to transform this legacy printer into a modern, reliable, and highly tunable machine using current open-source firmware and tooling.
 
@@ -27,24 +27,27 @@ The goal is to transform this legacy printer into a modern, reliable, and highly
 - OrcaSlicer (slicer)
 - OctoPi (current OS image)
 
-TESTED WITH **OrcaSlicer v2.3.2**
+**Tested with: OrcaSlicer v2.3.2**
 
 ### Planned Migration
 
-We are currently in the process of migrating from OctoPrint (OctoPi) to a more native Klipper stack:
+We are currently migrating to a native Klipper stack:
 
 - Moonraker (Klipper API layer)
 - Mainsail or Fluidd (web UI)
 - KlipperScreen (touchscreen interface, planned)
 
+---
+
 ## Quick Start
 
-Follow these steps to get the printer up and running with this configuration:
+Follow these steps to get the printer up and running:
 
 1. Flash Klipper firmware to the BTT SKR Pico
 2. Install Klipper on your Raspberry Pi (OctoPi or MainsailOS)
-3. Copy `printer.cfg` to your Klipper config directory:
-4. Update the MCU serial in `printer.cfg`: Then replace the `serial:` line with your device ID
+3. Copy `printer.cfg` to: /home/pi/printer_data/config/
+4. Update the MCU serial in `printer.cfg`: ls /dev/serial/by-id/
+Replace the `serial:` line with your device ID
 5. Restart Klipper
 6. Home the printer and verify motion
 7. Run a test print (e.g., Benchy)
@@ -58,39 +61,71 @@ Follow these steps to get the printer up and running with this configuration:
 The printer is now:
 
 - Fully operational on Klipper
-- Running stable prints without thermal shutdowns
-- Using corrected extrusion settings (`rotation_distance`)
-- PID tuned for improved thermal response
-- Cooling system tuned to prevent heater instability
-- Producing successful Benchy prints with good quality
+- Producing stable, repeatable prints
+- Thermally stable (no heater shutdowns)
+- Mechanically calibrated and dimensionally accurate
+- Tuned for clean surface finish and minimal stringing
 
-### Recent Major Fixes
+---
 
-- Resolved G2/G3 arc command issues
+## Final Tuned Configuration
+
+### Print Settings (PLA)
+
+- Nozzle: 0.3 mm  
+- Layer Height: 0.2 mm  
+- Temperature: 215–220°C  
+
+### Klipper
+
+- Pressure Advance: ~0.11  
+- PID tuning completed  
+
+### Retraction
+
+- Distance: 0.8 mm  
+- Speed: 35 mm/s  
+- Wipe enabled  
+- Z-hop disabled  
+
+### Cooling
+
+- Reduced fan speeds (~30–80%) to maintain thermal stability  
+
+### Speed
+
+- ~80 mm/s general print speed  
+
+---
+
+## Tuning Summary
+
+Key improvements achieved during this conversion:
+
 - Corrected extrusion scaling (`rotation_distance`)
-- Tuned cooling behavior to prevent heater shutdown
-- Performed PID calibration for stable temperature control
+- Eliminated heater shutdowns by tuning cooling behavior
+- Resolved arc command (G2/G3) compatibility issues
+- Applied Pressure Advance to improve corner accuracy and reduce dimensional error
+- Tuned retraction and disabled Z-hop to eliminate stringing
+- Balanced temperature for optimal flow vs. detail
 
 ---
 
 ## Next Steps
 
-- Final extruder calibration (precise `rotation_distance` measurement)
-- Retraction tuning to reduce stringing
-- Pressure Advance calibration (Klipper feature)
 - Input Shaping for reduced ringing / ghosting
-- Migration to Mainsail / Moonraker stack
-- Documentation of wiring and full Klipper configuration
+- Migration to Moonraker + Mainsail
+- Final documentation of wiring and hardware layout
 
 ---
 
-## Repository Contents (Coming Soon)
+## Repository Contents
 
-All configuration files and documentation will be uploaded shortly, including:
+This repository will include:
 
 - Klipper `printer.cfg`
-- Wiring diagrams for BTT Pico + BLTouch
-- Slicer profiles (OrcaSlicer)
+- Wiring diagrams (BTT Pico + BLTouch)
+- OrcaSlicer configuration bundle (`.orca_printer`)
 - Macros and startup scripts
 - Troubleshooting notes and lessons learned
 
@@ -98,16 +133,17 @@ All configuration files and documentation will be uploaded shortly, including:
 
 ## Notes
 
-This project is being actively developed and refined. The current configuration is stable but still undergoing tuning and optimization.
+This project has reached a stable and fully functional configuration.  
+Further updates will focus on refinement and documentation.
 
 ---
 
 ## Credits / Inspiration
 
-This project builds on community knowledge of Klipper conversions and Printrbot hardware, with additional tuning and debugging performed during this conversion process.
+This project builds on community knowledge of Klipper conversions and Printrbot hardware, with additional tuning and debugging performed during this build.
 
 ---
 
-## Contact / Contributions
+## Contributions
 
-Feel free to open issues or contribute if you're working on a similar conversion. More documentation will be added as the project evolves.
+Feel free to open issues or contribute if you're working on a similar conversion.
