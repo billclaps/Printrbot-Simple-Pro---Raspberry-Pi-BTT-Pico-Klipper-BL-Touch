@@ -1,5 +1,5 @@
 # Printrbot Simple Pro — Raspberry Pi + BTT Pico + Klipper + BLTouch Conversion
-<img src="images/Printer.jpeg" width="500">
+<img src="images/Printer.jpeg" width="250">
 ## Overview
 This project documents the modernization of a Printrbot Simple Pro by replacing the original control electronics with a Raspberry Pi running Klipper and a BigTreeTech SKR Pico control board.
 
