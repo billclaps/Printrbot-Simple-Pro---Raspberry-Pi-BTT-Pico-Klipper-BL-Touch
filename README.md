@@ -27,6 +27,8 @@ The goal is to transform this legacy printer into a modern, reliable, and highly
 - OrcaSlicer (slicer)
 - OctoPi (current OS image)
 
+TESTED WITH **OrcaSlicer v2.3.2**
+
 ### Planned Migration
 
 We are currently in the process of migrating from OctoPrint (OctoPi) to a more native Klipper stack:
