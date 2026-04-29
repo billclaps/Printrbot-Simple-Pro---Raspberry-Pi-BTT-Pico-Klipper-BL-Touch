@@ -16,6 +16,7 @@ The goal is to transform this legacy printer into a modern, reliable, and highly
 - Bed Leveling: BLTouch
 - Extruder: Stock Printrbot extruder (unchanged)
 - Hotend: Stock Printrbot hotend
+- Bed: Glass secured with two sided tape (simple but effective solution)
 - Cooling: Stock fans (reconfigured and tuned)
 
 ---
