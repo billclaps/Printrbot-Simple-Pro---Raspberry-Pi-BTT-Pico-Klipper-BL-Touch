@@ -24,19 +24,10 @@ The goal is to transform this legacy printer into a modern, reliable, and highly
 ## Software Stack
 
 - Klipper (firmware running on Raspberry Pi + Pico)
-- OctoPrint (current UI / control interface)
-- OrcaSlicer (slicer)
-- OctoPi (current OS image)
-
-**Tested with: OrcaSlicer v2.3.2**
-
-### Planned Migration
-
-We are currently migrating to a native Klipper stack:
-
 - Moonraker (Klipper API layer)
 - Mainsail or Fluidd (web UI)
-- KlipperScreen (touchscreen interface, planned)
+- KlipperScreen (touchscreen interface)
+- OrcaSlicer (slicer) v2.3.2
 
 ---
 
