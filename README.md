@@ -10,8 +10,15 @@ The goal is to transform this legacy printer into a modern, reliable, and highly
 ## Hardware Setup
 
 - Printer: Printrbot Simple Pro (stock frame and motion system)
-- Control Board: BigTreeTech SKR Pico
 - Host: Raspberry Pi 3B+
+- Control Board: BigTreeTech SKR Pico
+  BOOT jumper: REMOVED
+  USB power jumper: REMOVED
+  USB blocker: INSTALLED
+  12V power: CONNECTED
+
+- USB cable:
+    Pi → USB blocker → Pico
 - Firmware: Klipper
 - Bed Leveling: BLTouch
 - Extruder: Stock Printrbot extruder (unchanged)
