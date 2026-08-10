@@ -271,7 +271,7 @@ Although the electronics have been modernized, the project intentionally preserv
 
 # Acknowledgements
 
-Many thanks to the Klipper community, BigTreeTech, and the Printrbot community for providing documentation, examples, and inspiration that made this conversion possible.  The "Pro_Fan_Shroud.stl" file was the original from Printrbot. The "new_simple_production_v2_v81_fan_shroud_1_v1.stl" file was created by pmally - https://www.thingiverse.com/thing:3929880
+Many thanks to the Klipper community, BigTreeTech, and the Printrbot community for providing documentation, examples, and inspiration that made this conversion possible.  The "Pro_Fan_Shroud.stl" file was the original from Printrbot. The "new_simple_production_v2_v81_fan_shroud_1_v1.stl" file was created by pmally - https://www.thingiverse.com/thing:3929880 - https://github.com/drphil3d
 
 ---
 
