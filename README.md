@@ -8,7 +8,7 @@ This project documents the modernization of a **Printrbot Simple Pro** by replac
 
 The objective was to transform this legacy printer into a modern, reliable, and highly tunable machine while retaining the original mechanical platform.
 
-This repository includes the hardware configuration, firmware, slicer profiles, printer configuration, tuning notes, and lessons learned throughout the conversion.
+This repository includes the hardware configuration, firmware, slicer profiles, printer configuration, tuning notes, and lessons learned throughout the conversion.  
 
 ---
 
@@ -265,7 +265,7 @@ This combination produced reliable cold boots and stable USB communication.
 
 # Notes
 
-Although the electronics have been modernized, the project intentionally preserves the original Printrbot motion system. The goal is to demonstrate what can be achieved with modern firmware while retaining legacy hardware.
+Although the electronics have been modernized, the project intentionally preserves the original Printrbot motion system. The goal is to demonstrate what can be achieved with modern firmware while retaining legacy hardware.  **** Please be aware that placing the Raspberry Pi near the Y Stepper Motor might be causing random restarts.  A beter configuration is likely needed or improved shielding. ****  
 
 ---
 
